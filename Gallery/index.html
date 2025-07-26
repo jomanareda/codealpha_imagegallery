@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="title">Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('reading')">Reading</button>
+    <button onclick="filterImages('makeup')">Makeup</button>
+    <button onclick="filterImages('healthy')">Healthy Food</button>
+    <button onclick="filterImages('summer')">Summer</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <!-- Makeup -->
+    <div class="gallery-item makeup"><img src="images/makeup1.jpg" alt="Makeup 1" onclick="openLightbox(this)"></div>
+    <div class="gallery-item makeup"><img src="images/makeup2.jpg" alt="Makeup 2" onclick="openLightbox(this)"></div>
+    <div class="gallery-item makeup"><img src="images/makeup3.jpg" alt="Makeup 3" onclick="openLightbox(this)"></div>
+    <div class="gallery-item makeup"><img src="images/makeup4.jpg" alt="Makeup 4" onclick="openLightbox(this)"></div>
+    <div class="gallery-item makeup"><img src="images/makeup5.jpg" alt="Makeup 5" onclick="openLightbox(this)"></div>
+    <div class="gallery-item makeup"><img src="images/makeup6.jpg" alt="Makeup 6" onclick="openLightbox(this)"></div>
+
+    <!-- Summer -->
+    <div class="gallery-item summer"><img src="images/summer2.jpg" alt="Summer 2" onclick="openLightbox(this)"></div>
+    <div class="gallery-item summer"><img src="images/summer3.jpg" alt="Summer 3" onclick="openLightbox(this)"></div>
+    <div class="gallery-item summer"><img src="images/summer4.jpg" alt="Summer 4" onclick="openLightbox(this)"></div>
+    <div class="gallery-item summer"><img src="images/summer5.jpg" alt="Summer 5" onclick="openLightbox(this)"></div>
+
+    <!-- Healthy Food -->
+    <div class="gallery-item healthy"><img src="images/healthyfood1.jpg" alt="Healthy Food 1" onclick="openLightbox(this)"></div>
+    <div class="gallery-item healthy"><img src="images/healthyfood2.jpg" alt="Healthy Food 2" onclick="openLightbox(this)"></div>
+    <div class="gallery-item healthy"><img src="images/healthyfood3.jpg" alt="Healthy Food 3" onclick="openLightbox(this)"></div>
+    <div class="gallery-item healthy"><img src="images/healthyfood4.jpg" alt="Healthy Food 4" onclick="openLightbox(this)"></div>
+    <div class="gallery-item healthy"><img src="images/healthyfood5.jpg" alt="Healthy Food 5" onclick="openLightbox(this)"></div>
+
+    <!-- Reading -->
+    <div class="gallery-item reading"><img src="images/reading1.jpg" alt="Reading 1" onclick="openLightbox(this)"></div>
+    <div class="gallery-item reading"><img src="images/reading2.jpg" alt="Reading 2" onclick="openLightbox(this)"></div>
+    <div class="gallery-item reading"><img src="images/reading3.jpg" alt="Reading 3" onclick="openLightbox(this)"></div>
+    <div class="gallery-item reading"><img src="images/reading4.jpg" alt="Reading 4" onclick="openLightbox(this)"></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" />
+    <div class="navigation">
+      <span class="prev" onclick="navigate(-1)">&#10094;</span>
+      <span class="next" onclick="navigate(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
